@@ -1,15 +1,23 @@
-function bubbleSort(array){
-  for (var i = 0; i < array.length; i++){
-    var currentIndex = array[i];
-    var nextIndex = array[i+1];
-    if (array[i+1] < array[i]){
-      array[i] = nextIndex;
-      array[i+1] = currentIndex;
-    }
+function bubbleSort(arr){
+  var swapped = true;
+  while (swapped){
+  	swapped = false;
+  	for (var i = 0; i < arr.length; i++){
+	    let temp = arr[i];
+	    if (arr[i] > arr[i+1]){
+	      arr[i] = arr[i+1];
+	      arr[i+1] = temp;
+		  swapped = true;
+	    }
+  	}
   }
-  return array;
+  return arr;
 }
 
+function inOrder(array, index){
+  if (index === array.length - 1) return true;
+  return (array[index] < array[index+1]);
+}
 
 function mergeSort(arr){
 
