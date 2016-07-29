@@ -8,7 +8,7 @@ describe('Merge Sort', function(){
   });
 
   it('sorts unsorted array', function(){
-    var giantArray = [4, 2, 5, 6, 2, 1, 3,8,122,5,64,3]
-    expect(mergeSort(giantArray)).toEqual(giantArray.sort());
+    var giantArray = [4, 2, 5, 6, 2, 1, 3,8,122,5,64,3];
+    expect(mergeSort(giantArray)).toEqual([ 1, 2, 2, 3, 3, 4, 5, 5, 6, 8, 64, 122 ]);
   })
 });
